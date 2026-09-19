@@ -83,18 +83,27 @@ Spring Boot Backend
         │ JPA / Hibernate
         ▼
 PostgreSQL Database
+
 API Integration
+React.js Frontend
+        │
+        │ REST API / Axios
+        ▼
+Spring Boot Backend
+        │
+        │ JPA / Hibernate
+        ▼
+PostgreSQL Databas
 
 The frontend communicates with the Spring Boot backend using Axios.
-
 Example:
-
 const api = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL}/api`,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
 Getting Started
 1. Clone the Repository
 git clone https://github.com/Akshjain14/MediConnect.git
@@ -102,38 +111,32 @@ cd MediConnect
 2. Run Backend
 
 Navigate to the backend directory:
-
 cd backend
 
 Run the Spring Boot application using Maven:
-
 mvn spring-boot:run
 
 The backend will run on:
-
 http://localhost:8080
 3. Run Frontend
 
 Open another terminal:
-
 cd frontend
 npm install
 npm run dev
 
 The frontend will be available at:
-
 http://localhost:5173
+
 Environment Variables
 Frontend
 
 Create a .env file inside the frontend directory:
-
 VITE_API_URL=http://localhost:8080
 
 For production, configure the deployed backend URL in the Render environment variables.
 
 Deployment
-
 The application is deployed using Render.
 
 Frontend: Render Static Site
@@ -146,10 +149,8 @@ Doctor availability calendar
 Patient medical history
 Prescription management
 Improved admin dashboard
-JWT-based authentication and role-based authorization
+
 Author
-
 Aksh Jain
-
 B.Tech Computer Science and Engineering
 DIT University, Dehradun

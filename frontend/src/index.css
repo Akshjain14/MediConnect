@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Classy Healthcare Palette: Deep Slate Navy, Ocean Teal, Crisp Cyan */
+  --bs-primary: #0284c7;
+  --bs-primary-rgb: 2, 132, 199;
+  --bs-secondary: #64748b;
+  --bs-success: #059669;
+  --bs-info: #0ea5e9;
+  --bs-warning: #f59e0b;
+  --bs-danger: #ef4444;
+  --bs-dark: #0f172a;
+  --bs-body-bg: #f8fafc;
+  --bs-body-color: #1e293b;
+  --bs-font-sans-serif: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+
+  --mc-navy: #0f172a;
+  --mc-slate: #1e293b;
+  --mc-teal: #0d9488;
+  --mc-cyan: #0284c7;
+  --mc-card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  --mc-card-hover: 0 20px 30px -10px rgba(2, 132, 199, 0.12), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===================================================
+   CLASSY NAVBAR
+   =================================================== */
+.navbar-custom {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0284c7, #0d9488);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 0.925rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.75) !important;
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(2, 132, 199, 0.25);
+  border: 1px solid rgba(2, 132, 199, 0.35);
+  font-weight: 600;
+}
+
+/* ===================================================
+   ELEGANT HERO SECTION
+   =================================================== */
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.15), transparent 60%);
+  pointer-events: none;
+}
+
+/* ===================================================
+   AUTHENTIC MEDICAL PLUS LOGO CIRCLE
+   =================================================== */
+.medical-plus-circle {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.28);
+  border: 3px solid #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.medical-plus-circle:hover {
+  transform: scale(1.05);
+}
+
+/* Form Card Aesthetic */
+.auth-card {
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.03) !important;
+  background: #ffffff;
+}
+
+.auth-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 2.25rem 2rem 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.auth-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #0d9488, #38bdf8);
+}
+
+/* Form Inputs Styling */
+.auth-input-group .form-control {
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.auth-input-group .form-control:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  background-color: #ffffff;
+}
+
+.auth-input-group .input-group-text {
+  border-radius: 10px 0 0 10px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-right: none;
+  color: #64748b;
+}
+
+.auth-input-group .form-control.border-start-0 {
+  border-radius: 0 10px 10px 0;
+}
+
+/* Sleek Button */
+.btn-auth-submit {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border: none;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-auth-submit:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45);
+}
+
+/* ===================================================
+   SINGLE-LINE DEMO ROLE BUTTONS
+   =================================================== */
+.demo-role-btn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.demo-role-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.demo-role-btn.patient-btn:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+  background-color: #f0f9ff;
+}
+
+.demo-role-btn.doctor-btn:hover {
+  border-color: #059669;
+  color: #059669;
+  background-color: #f0fdf4;
+}
+
+.demo-role-btn.admin-btn:hover {
+  border-color: #0f172a;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+/* ===================================================
+   CARDS & HOVER EFFECTS
+   =================================================== */
+.doctor-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mc-card-hover) !important;
+}
+
+.card {
+  border-color: #e2e8f0;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Line Clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Table Enhancements */
+.table> :not(caption)>*>* {
+  padding: 0.9rem 0.85rem;
+}
